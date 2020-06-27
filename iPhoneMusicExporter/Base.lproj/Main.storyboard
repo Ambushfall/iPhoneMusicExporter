@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iPhoneMusicExporter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22H-18-d4V">
+                                <rect key="frame" x="90" y="206" width="234" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Export All Music">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="allMusicAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hrg-lx-R6f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hse-mO-hVN">
+                                <rect key="frame" x="90" y="264" width="234" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
+                                <state key="normal" title="Export Selected Music">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectedMusicAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eaq-3J-heZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app will export your music purchases from your phone to the Documents directory in .m4a format" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RI7-4Q-AQH">
+                                <rect key="frame" x="20" y="94" width="384" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFX-a2-5ai">
+                                <rect key="frame" x="90" y="322" width="234" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Preview Exports">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6OO-e2-aSU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0MP-uQ-5qn">
+                                <rect key="frame" x="10" y="408" width="394" height="488"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hse-mO-hVN" firstAttribute="top" secondItem="22H-18-d4V" secondAttribute="bottom" constant="20" id="3ij-Lh-E2h"/>
+                            <constraint firstItem="ZFX-a2-5ai" firstAttribute="centerX" secondItem="22H-18-d4V" secondAttribute="centerX" id="5Fl-GY-SY6"/>
+                            <constraint firstItem="22H-18-d4V" firstAttribute="top" secondItem="RI7-4Q-AQH" secondAttribute="bottom" constant="40" id="Kai-YP-8Oh"/>
+                            <constraint firstItem="ZFX-a2-5ai" firstAttribute="top" secondItem="Hse-mO-hVN" secondAttribute="bottom" constant="20" id="MfW-56-ta5"/>
+                            <constraint firstItem="22H-18-d4V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pc9-zj-2GW"/>
+                            <constraint firstAttribute="bottom" secondItem="0MP-uQ-5qn" secondAttribute="bottom" id="RQn-po-akg"/>
+                            <constraint firstItem="ZFX-a2-5ai" firstAttribute="width" secondItem="22H-18-d4V" secondAttribute="width" id="Re9-MD-qya"/>
+                            <constraint firstItem="0MP-uQ-5qn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="SHq-Zf-EMo"/>
+                            <constraint firstItem="RI7-4Q-AQH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="UF5-84-DmJ"/>
+                            <constraint firstItem="0MP-uQ-5qn" firstAttribute="top" secondItem="ZFX-a2-5ai" secondAttribute="bottom" constant="48" id="UXT-vd-uOG"/>
+                            <constraint firstItem="Hse-mO-hVN" firstAttribute="centerX" secondItem="22H-18-d4V" secondAttribute="centerX" id="bFM-Pr-3vu"/>
+                            <constraint firstItem="0MP-uQ-5qn" firstAttribute="trailing" secondItem="RI7-4Q-AQH" secondAttribute="trailing" id="chI-OU-aTK"/>
+                            <constraint firstItem="0MP-uQ-5qn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lrs-We-hqW"/>
+                            <constraint firstItem="RI7-4Q-AQH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p4M-8u-0S7"/>
+                            <constraint firstItem="Hse-mO-hVN" firstAttribute="width" secondItem="22H-18-d4V" secondAttribute="width" id="xHC-Uh-5Fw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="allButton" destination="22H-18-d4V" id="z8u-F0-Zsi"/>
+                        <outlet property="console" destination="0MP-uQ-5qn" id="sff-zM-kBx"/>
+                        <outlet property="previewButton" destination="ZFX-a2-5ai" id="OmL-gf-kyB"/>
+                        <outlet property="selectedButton" destination="Hse-mO-hVN" id="xcu-WF-MJS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
