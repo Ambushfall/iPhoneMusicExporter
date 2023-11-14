@@ -2,9 +2,6 @@
 //  ViewController.swift
 //  iPhoneMusicExporter
 //
-//  Created by Rajesh Thangaraj on 26/06/20.
-//  Copyright © 2020 Rajesh Thangaraj. All rights reserved.
-//
 
 import UIKit
 import QuickLook
