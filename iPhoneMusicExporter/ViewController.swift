@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     
     @IBAction func selectedMusicAction(_ sender: Any) {
         let controller = MPMediaPickerController(mediaTypes: .music)
+        controller.allowsPickingMultipleItems = true
         controller.delegate = self
         present(controller, animated: true)
     }
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
             for content in contents {
                 qlItems?.append(PreviewItem(url: content))
             }
+            clearConsole()
             present(controller, animated: true)
         } else {
             addToConsole(text: "No items available for preview")
@@ -64,6 +66,12 @@ class ViewController: UIViewController {
     func addToConsole(text: String) {
         DispatchQueue.main.async {
             self.console.text = text + "\n\n" + self.console.text
+        }
+    }
+    
+    func clearConsole(){
+        DispatchQueue.main.async {
+            self.console.text = ""
         }
     }
     
@@ -121,13 +129,20 @@ extension ViewController: QLPreviewControllerDataSource {
     func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
         return qlItems![index]
     }
+    
 }
 
 extension ViewController: MPMediaPickerControllerDelegate {
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         mediaPicker.dismiss(animated: true)
         if let item = mediaItemCollection.items.first {
-            save(item) { (status) in }
+            if(mediaItemCollection.items.count > 1) {
+                for i in mediaItemCollection.items {
+                    save(i) {(status) in}
+                }
+            } else {
+                save(item) {(status) in}
+            }
         } else {
             addToConsole(text: "Media unavailable")
         }
