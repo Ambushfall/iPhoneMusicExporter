@@ -1,5 +1,7 @@
 iPhoneMusicExporter_iPhoneMusicExporter_*.xctestproducts
-
+*/xcuserdata/*
+*/*/xcuserdata/*
+*.xcuserstate
 iPhoneMusicExporter.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 iPhoneMusicExporter.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 iPhoneMusicExporter.xcodeproj/project.xcworkspace/xcuserdata/rajesh-2497.xcuserdatad/UserInterfaceState.xcuserstate
