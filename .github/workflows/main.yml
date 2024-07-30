@@ -14,6 +14,9 @@ jobs:
       # GitHub shares this online, e.g. https://github.com/actions/runner-images/blob/macOS-12/20230224.1/images/macos/macos-12-Readme.md
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: fastlane update
+        run: gem install fastlane
       - name: check Xcode version
         uses: yukiarrr/ios-build-action@v1.12.0
         with:
