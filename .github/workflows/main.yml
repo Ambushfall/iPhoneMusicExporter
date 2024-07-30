@@ -23,3 +23,4 @@ jobs:
           code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
           team-id: ${{ secrets.TEAM_ID }}
           certificate-password: ${{ secrets.P12_KEY_BASE64 }}
+          export-method: "development"
