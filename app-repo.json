@@ -1,29 +1,35 @@
 {
-    "name": "LC Repo",
-    "identifier": "com.lukathetormentor.iPhoneMusicExporter",
-    "apps": [
-      {
-        "name": "iPhoneMusicExporter",
-        "bundleIdentifier": "com.lukathetormentor.test",
-        "developerName": "ambushfall",
-        "iconURL": "",
-        "localizedDescription": "iPhoneMusicExporter is a helper tool used to retrieve your own music files from an iPhone",
-        "subtitle": "Random Testing",
-        "tintColor": "848ef9",
-        "versions": [
-          {
-            "version": "",
-            "date": "",
-            "size": 0,
-            "downloadURL": ""
-          }
-        ],
-        "size": 0,
-        "version": "",
-        "versionDate": "",
-        "downloadURL": "",
-        "appPermissions": {}
-      }
-    ],
-    "news": []
-  }
+  "name": "LC Repo",
+  "identifier": "com.lukathetormentor.iPhoneMusicExporter",
+  "apps": [
+    {
+      "name": "iPhoneMusicExporter",
+      "bundleIdentifier": "com.lukathetormentor.test",
+      "developerName": "ambushfall",
+      "iconURL": "",
+      "localizedDescription": "iPhoneMusicExporter is a helper tool used to retrieve your own music files from an iPhone",
+      "subtitle": "Random Testing",
+      "tintColor": "848ef9",
+      "versions": [
+        {
+          "version": "",
+          "date": "",
+          "size": 0,
+          "downloadURL": ""
+        },
+        {
+          "version": "v1.0",
+          "date": "2024-09-02T15:28:52Z",
+          "size": 33874,
+          "downloadURL": "https://github.com/Ambushfall/iPhoneMusicExporter/releases/download/v1.0/iPhoneMusicExporter_v1.0.ipa"
+        }
+      ],
+      "size": 33874,
+      "version": "v1.0",
+      "versionDate": "2024-09-02T15:28:52Z",
+      "downloadURL": "https://github.com/Ambushfall/iPhoneMusicExporter/releases/download/v1.0/iPhoneMusicExporter_v1.0.ipa",
+      "appPermissions": {}
+    }
+  ],
+  "news": []
+}
