@@ -1,0 +1,29 @@
+{
+    "name": "LC Repo",
+    "identifier": "com.lukathetormentor.iPhoneMusicExporter",
+    "apps": [
+      {
+        "name": "Feather",
+        "bundleIdentifier": "kh.crysalis.feather",
+        "developerName": "ambushfall",
+        "iconURL": "",
+        "localizedDescription": "iPhoneMusicExporter is a helper tool used to retrieve your own music files from an iPhone",
+        "subtitle": "Random Testing",
+        "tintColor": "848ef9",
+        "versions": [
+          {
+            "version": "",
+            "date": "",
+            "size": 0,
+            "downloadURL": ""
+          }
+        ],
+        "size": 0,
+        "version": "",
+        "versionDate": "",
+        "downloadURL": "",
+        "appPermissions": {}
+      }
+    ],
+    "news": []
+  }
