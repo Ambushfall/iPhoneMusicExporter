@@ -24,7 +24,7 @@ jobs:
 
       - name: Compile f
         run: | 
-          make package SCHEME="'feather (Release)'"
+          make package SCHEME="'iPhoneMusicExporter'"
           mv packages/* upload/
 
       - name: Get Version Number
