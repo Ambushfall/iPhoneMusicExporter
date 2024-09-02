@@ -2,7 +2,7 @@ TARGET_CODESIGN = $(shell which ldid)
 
 PLATFORM = iphoneos
 NAME = iPhoneMusicExporter
-SCHEME ?= 'iPhoneMusicExporter (Debug)'
+SCHEME ?= 'iPhoneMusicExporter'
 RELEASE = Release-iphoneos
 CONFIGURATION = Release
 
