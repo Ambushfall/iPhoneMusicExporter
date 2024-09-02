@@ -44,7 +44,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: iPhoneMusicExporter v${{ env.VERSION }}
+          name: iPhoneMusicExporter ${{ github.ref_name }}
           files: |
             upload/*ipa
           generate_release_notes: true
