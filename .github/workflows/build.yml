@@ -30,6 +30,6 @@ jobs:
       - name: Get Version Number
         id: get_version
         run: |
-          VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Payload/feather.app/Info.plist)
+          VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Payload/iPhoneMusicExporter.app/Info.plist)
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
