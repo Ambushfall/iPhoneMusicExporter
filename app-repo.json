@@ -3,8 +3,8 @@
     "identifier": "com.lukathetormentor.iPhoneMusicExporter",
     "apps": [
       {
-        "name": "Feather",
-        "bundleIdentifier": "kh.crysalis.feather",
+        "name": "iPhoneMusicExporter",
+        "bundleIdentifier": "com.lukathetormentor.test",
         "developerName": "ambushfall",
         "iconURL": "",
         "localizedDescription": "iPhoneMusicExporter is a helper tool used to retrieve your own music files from an iPhone",
