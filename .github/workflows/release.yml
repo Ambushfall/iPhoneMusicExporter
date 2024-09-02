@@ -1,0 +1,52 @@
+name: Create New Release
+
+on:
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependencies (packages)
+        run: |
+          curl -LO https://github.com/ProcursusTeam/ldid/releases/download/v2.1.5-procursus7/ldid_macosx_x86_64
+          sudo install -m755 ldid_macosx_x86_64 /usr/local/bin/ldid
+          brew install 7zip gnu-sed
+
+      - name: Select Xcode 15.1
+        run: | 
+          sudo xcode-select -s /Applications/Xcode_15.1.app/Contents/Developer
+          mkdir upload
+
+      - name: Compile f
+        run: | 
+          make package SCHEME="'iPhoneMusicExporter (Release)'"
+          mv packages/* upload/
+
+      - name: Get Version Number
+        id: get_version
+        run: |
+          VERSION=$( /usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Payload/iPhoneMusicExporter.app/Info.plist )
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: Setup
+        run: |
+          mv upload/iPhoneMusicExporter.ipa upload/iPhoneMusicExporter_v${VERSION}.ipa
+          cp upload/iPhoneMusicExporter_v${VERSION}.ipa upload/iPhoneMusicExporter_v${VERSION}.tipa
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: iPhoneMusicExporter v${{ env.VERSION }}
+          tag_name: v${{ env.VERSION }}
+          files: |
+            upload/*ipa
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          draft: true
+        env:
+          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
