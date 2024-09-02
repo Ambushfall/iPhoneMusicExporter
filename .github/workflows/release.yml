@@ -3,6 +3,9 @@ name: Create New Release
 on:
 
   workflow_dispatch:
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   build:
@@ -42,7 +45,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: iPhoneMusicExporter v${{ env.VERSION }}
-          tag_name: v${{ env.VERSION }}
           files: |
             upload/*ipa
           generate_release_notes: true
